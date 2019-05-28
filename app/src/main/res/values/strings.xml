@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AI Art</string>
+    <string name="Text_num_gen">Number to Generate</string>
+    <string name="Text_num_draw">Number to Draw</string>
+    <string name="Text_granularity">Granularity</string>
+    <string name="Text_placeholder">placeholder</string>
+    <string name="Text_generate">Generate</string>
+</resources>
