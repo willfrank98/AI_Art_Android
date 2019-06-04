@@ -32,12 +32,12 @@ public class NewImageActivity extends AppCompatActivity {
         Uri imageUri = intent.getData();
         InputStream imageStream = null;
         try {
+            assert imageUri != null;
             imageStream = getContentResolver().openInputStream(imageUri);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-        this.image = selectedImage;
+        this.image = BitmapFactory.decodeStream(imageStream);
 
         // set click listener for generate button
         Button button = (Button) findViewById(R.id.buttonGenerate);

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class Square implements IShape {
+public class Square implements IShape {
     private double fitness;
     private int color;
     private Point[] points;

@@ -7,20 +7,20 @@ import android.graphics.Point;
 
 import java.util.Arrays;
 
-class ImageRepresentation {
+public class ImageRepresentation {
     private int height;
     private int width;
     private Bitmap image;
     private IShape[] shapes;
 //    private double[] fitness;
 
-    ImageRepresentation(Bitmap image) {
+    public ImageRepresentation(Bitmap image) {
         this.image = image;
         this.height = image.getHeight();
         this.width = image.getWidth();
     }
 
-    void NewBatch(int num, String type, int minLength, int maxLength) {
+    public void NewBatch(int num, String type, int minLength, int maxLength) {
         IShape[] shapes;
         shapes = new IShape[num];
 //        int onePercent = num / 100;

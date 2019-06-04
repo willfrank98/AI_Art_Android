@@ -8,7 +8,7 @@ import android.graphics.Point;
 import java.util.ArrayList;
 import java.util.List;
 
-class Circle implements IShape {
+public class Circle implements IShape {
     private int color;
     private double fitness;
     private Point center;
