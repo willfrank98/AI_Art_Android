@@ -59,9 +59,9 @@ public class ImageRepresentation {
         for (IShape shape : this.shapes) {
             int pixels = 0;
             double tempFitness = 0.0;
+            int shapeColor = shape.GetColor();
             for (Point point : shape.IteratePoints(granularity)) {
                 if (point.x >= 0 && point.x < this.width && point.y >= 0 && point.y < this.height) {
-                    int shapeColor = shape.GetColor();
                     int picColor = colors[point.x + point.y * width];
 
                     double[] c1 = {Color.red(picColor) / 255.0, Color.green(picColor) / 255.0, Color.blue(picColor) / 255.0};
@@ -151,10 +151,11 @@ public class ImageRepresentation {
         return Lab;
     }
 
-    public void Draw(int thisMany, String shapeType) {
-        Canvas drawing = new Canvas();
+    public Bitmap Draw(int thisMany, String shapeType) {
+        Bitmap finalImage = Bitmap.createBitmap(this.width, this.height, Bitmap.Config.ARGB_4444);
+        Canvas drawing = new Canvas(finalImage);
 
-        drawing.drawRGB(0, 0, 0);
+        drawing.drawRGB(255, 255, 255);
 
         //draws the top ranking thisMany shapes, from worst to best
         int onePercent = thisMany / 100;
@@ -170,8 +171,6 @@ public class ImageRepresentation {
         }
 
         drawing.save();
-
-//        image.Save(imageOut, ImageFormat.Bmp);
-//        image.Dispose();
+        return finalImage;
     }
 }

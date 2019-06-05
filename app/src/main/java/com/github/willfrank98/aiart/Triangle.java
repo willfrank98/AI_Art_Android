@@ -3,6 +3,8 @@ package com.github.willfrank98.aiart;
 import android.arch.core.util.Function;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.Point;
 
 import java.util.ArrayList;
@@ -134,8 +136,23 @@ public class Triangle implements IShape {
     }
 
     @Override
-    public Canvas AddShape(Canvas old) {
-        return null;
+    public Canvas AddShape(Canvas canvas) {
+        Paint paint = new Paint();
+        paint.setColor(this.color);
+        paint.setStyle(Paint.Style.FILL);
+
+        Path path = new Path();
+        path.moveTo(this.points[0].x, this.points[0].y);
+        path.lineTo(this.points[1].x, this.points[1].y);
+        path.moveTo(this.points[1].x, this.points[1].y);
+        path.lineTo(this.points[2].x, this.points[2].y);
+        path.moveTo(this.points[2].x, this.points[2].y);
+        path.lineTo(this.points[0].x, this.points[0].y);
+        path.close();
+
+        canvas.drawPath(path, paint);
+
+        return canvas;
     }
 
     @Override
