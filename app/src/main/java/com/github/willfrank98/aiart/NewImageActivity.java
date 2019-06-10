@@ -74,19 +74,4 @@ public class NewImageActivity extends AppCompatActivity {
         view.bringToFront();
         view.setVisibility(View.VISIBLE);
     }
-
-//    class NewImageView extends View {
-//        public NewImageView(Context context, AttributeSet attrs) {
-//            super(context, attrs);
-//        }
-//
-//        @Override
-//        protected void onDraw(Canvas canvas) {
-//            super.onDraw(canvas);
-//
-//            if (NewImageActivity.this.finalImage != null) {
-//                canvas.setBitmap(NewImageActivity.this.finalImage);
-//            }
-//        }
-//    }
 }
