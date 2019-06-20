@@ -67,7 +67,7 @@ public class ImageRepresentation {
                     double[] c1 = {Color.red(picColor) / 255.0, Color.green(picColor) / 255.0, Color.blue(picColor) / 255.0};
                     double[] c2 = {Color.red(shapeColor) / 255.0, Color.green(shapeColor) / 255.0, Color.blue(shapeColor) / 255.0};
 
-                    // investigate eventually
+                    // TODO: investigate eventually
 //                    ColorSpace lab = ColorSpace.get(ColorSpace.Named.CIE_LAB);
 //                    long tempc1 = Color.convert(shapeColor, lab);
 //                    long tempc2 = Color.convert(picColor, lab);

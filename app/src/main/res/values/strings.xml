@@ -6,4 +6,9 @@
     <string name="Text_placeholder">placeholder</string>
     <string name="Text_generate">Generate</string>
     <string name="FinalImageDesc">Displays the final generated image</string>
+    <string-array name="shapes_array">
+        <item>Triangle</item>
+        <item>Square</item>
+        <item>Circle</item>
+    </string-array>
 </resources>
